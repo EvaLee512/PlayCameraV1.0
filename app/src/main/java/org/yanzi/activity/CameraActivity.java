@@ -33,6 +33,12 @@ public class CameraActivity extends Activity implements CamOpenOverCallback {
 		//取消状态栏
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		setContentView(R.layout.activity_camera);
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
 		Thread openThread = new Thread(){
 			@Override
 			public void run() {
@@ -41,9 +47,7 @@ public class CameraActivity extends Activity implements CamOpenOverCallback {
 			}
 		};
 		openThread.start();
-		setContentView(R.layout.activity_camera);
 		initUI();
-
 		shutterBtn.setOnClickListener(new BtnListeners());
 	}
 
