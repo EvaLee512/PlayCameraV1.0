@@ -10,7 +10,6 @@ import android.graphics.Point;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.Menu;
 import android.view.SurfaceHolder;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -22,7 +21,7 @@ import android.widget.ImageButton;
 import com.example.evalee.playcamerav10.R;
 
 public class CameraActivity extends Activity implements CamOpenOverCallback {
-	private static final String TAG = "yanzi";
+	private static final String TAG = "CameraActivity_lsn";
 	CameraSurfaceView surfaceView = null;
 	ImageButton shutterBtn;
 	float previewRate = -1f;
@@ -46,13 +45,6 @@ public class CameraActivity extends Activity implements CamOpenOverCallback {
 		initUI();
 
 		shutterBtn.setOnClickListener(new BtnListeners());
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.camera, menu);
-		return true;
 	}
 
 	private void initUI(){

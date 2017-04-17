@@ -18,7 +18,7 @@ import android.util.Log;
 import android.view.SurfaceHolder;
 
 public class CameraInterface {
-	private static final String TAG = "yanzi";
+	private static final String TAG = "CameraInterface_lsn";
 	private Camera mCamera;
 	private Camera.Parameters mParams;
 	private boolean isPreviewing = false;

@@ -10,7 +10,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Callback {
-	private static final String TAG = "yanzi";
+	private static final String TAG = "CameraSurfaceView_lsn";
 	CameraInterface mCameraInterface;
 	Context mContext;
 	SurfaceHolder mSurfaceHolder;
