@@ -1,11 +1,11 @@
-package org.yanzi.camera;
+package org.evalee.camera;
 
 import java.io.IOException;
 import java.util.List;
 
-import org.yanzi.util.CamParaUtil;
-import org.yanzi.util.FileUtil;
-import org.yanzi.util.ImageUtil;
+import org.evalee.util.CamParaUtil;
+import org.evalee.util.FileUtil;
+import org.evalee.util.ImageUtil;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -40,10 +40,17 @@ public class CameraInterface {
 	}
 
 	public void doOpenCamera(CamOpenOverCallback callback){
-		Log.i(TAG, "Camera open....");
-		mCamera = Camera.open();
-		Log.i(TAG, "Camera open over....");
-		callback.cameraHasOpened();
+		Log.i(TAG, "Camera open....mCamera = "+mCamera);
+		if(mCamera !=null){
+			mCamera.setPreviewCallback(null);
+			mCamera.release();
+			mCamera = null;
+		}else {
+			mCamera = Camera.open();
+			Log.i(TAG, "Camera open over....");
+			callback.cameraHasOpened();
+		}
+
 	}
 	public void doStartPreview(SurfaceHolder holder, float previewRate){
 		Log.i(TAG, "doStartPreview...");

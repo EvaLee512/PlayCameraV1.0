@@ -1,6 +1,6 @@
-package org.yanzi.camera.preview;
+package org.evalee.camera.preview;
 
-import org.yanzi.camera.CameraInterface;
+import org.evalee.camera.CameraInterface;
 
 import android.content.Context;
 import android.graphics.PixelFormat;

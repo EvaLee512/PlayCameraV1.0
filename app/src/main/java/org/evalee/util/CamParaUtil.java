@@ -1,4 +1,4 @@
-package org.yanzi.util;
+package org.evalee.util;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -9,7 +9,7 @@ import android.hardware.Camera.Size;
 import android.util.Log;
 
 public class CamParaUtil {
-	private static final String TAG = "yanzi";
+	private static final String TAG = "CamParaUtil_lsn";
 	private CameraSizeComparator sizeComparator = new CameraSizeComparator();
 	private static CamParaUtil myCamPara = null;
 	private CamParaUtil(){

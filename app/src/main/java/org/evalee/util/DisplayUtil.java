@@ -1,4 +1,4 @@
-package org.yanzi.util;
+package org.evalee.util;
 
 import android.content.Context;
 import android.graphics.Point;

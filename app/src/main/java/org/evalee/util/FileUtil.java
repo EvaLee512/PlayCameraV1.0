@@ -1,4 +1,4 @@
-package org.yanzi.util;
+package org.evalee.util;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -19,7 +19,7 @@ public class FileUtil {
 
 	private static String initPath(){
 		if(storagePath.equals("")){
-			storagePath = parentPath.getAbsolutePath()+"/" + DST_FOLDER_NAME;
+			//storagePath = parentPath.getAbsolutePath()+"/" + DST_FOLDER_NAME;
 			storagePath = parentPath.getAbsolutePath()+"/" + "DCIM/Camera";
 			File f = new File(storagePath);
 			if(!f.exists()){
